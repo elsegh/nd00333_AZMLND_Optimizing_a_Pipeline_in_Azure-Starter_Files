@@ -13,7 +13,8 @@ Hyperparametrs of the model was optimized using HyperDrive.  AutoML run was also
 
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+This dataset contains data about direct marketing purposes(phone calls) of the banking sector.... we seek to predict whether the individual will 
+subscribe bank term deposit, column y ( yes/no).
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
