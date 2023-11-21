@@ -69,6 +69,7 @@ def main():
     logreg_model= LogisticRegression(C=args.C, max_iter=args.max_iter).fit(X_train, y_train)
     logreg_pred = logreg_model.predict(X_test)
     
+    # model accuracy for X_test
     accuracy = logreg_model.score(X_test, y_test)
     run.log("Accuracy", np.float(accuracy))
     os.makedirs('outputs', exist_ok=True)
