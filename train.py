@@ -66,10 +66,14 @@ def main():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
     ### YOUR CODE HERE ###a
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
-
-    accuracy = model.score(x_test, y_test)
+    logreg_model= LogisticRegression(C=args.C, max_iter=args.max_iter).fit(X_train, y_train)
+    logreg_pred = logreg_model.predict(X_test)
+    
+    accuracy = logreg_model.score(X_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+    os.makedirs('outputs', exist_ok=True)
+    # files saved in the "outputs" folder are automatically uploaded into run history
+    joblib.dump( logreg_model, 'outputs/logreg_model.joblib')
 
 if __name__ == '__main__':
     main()
