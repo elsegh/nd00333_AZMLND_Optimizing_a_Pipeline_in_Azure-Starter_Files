@@ -56,7 +56,8 @@ def main():
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
     
     # create tabular dataset from url
-    ds =TabularDatasetFactory.from_delimited_files('https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv')
+    dataPath = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+    ds =TabularDatasetFactory.from_delimited_files(dataPath)
 
     #ds=TabularDatasetFactory.from_delimited_files(path='https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook- data/bankmarketing_train.csv', validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False, encoding='utf8')
    
@@ -64,7 +65,7 @@ def main():
     
     # Split data into train and test sets.
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-    ### YOUR CODE HERE ###a
+    ###  ###a
 
     logreg_model= LogisticRegression(C=args.C, max_iter=args.max_iter).fit(X_train, y_train)
     logreg_pred = logreg_model.predict(X_test)
@@ -72,7 +73,9 @@ def main():
     # model accuracy for X_test
     Accuracy = logreg_model.score(X_test, y_test)
     run.log("Accuracy", np.float(Accuracy))
+    
     os.makedirs('outputs', exist_ok=True)
+    
     # files saved in the "outputs" folder are automatically uploaded into run history
     joblib.dump( logreg_model, 'outputs/logreg_model.joblib')
 
