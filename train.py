@@ -56,8 +56,8 @@ def main():
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
     
     # create tabular dataset from url
-    dataPath = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-    ds =TabularDatasetFactory.from_delimited_files(dataPath)
+    ds=TabularDatasetFactory.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
+   # ds =TabularDatasetFactory.from_delimited_files()
 
     #ds=TabularDatasetFactory.from_delimited_files(path='https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook- data/bankmarketing_train.csv', validate=True, include_path=False, infer_column_types=True, set_column_types=None, separator=',', header=True, partition_format=None, support_multi_line=False, empty_as_string=False, encoding='utf8')
    
