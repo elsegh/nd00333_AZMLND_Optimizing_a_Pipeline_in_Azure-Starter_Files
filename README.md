@@ -52,13 +52,13 @@ Scikit-Learn algorithm chosen is  binary logistic regression for classifiaction.
 
 The following configuration for AutoML was used:
 
- automl_config = AutoMLConfig(
-    experiment_timeout_minutes=30,
-    task='classification',
-    primary_metric='accuracy',
-    training_data=dataset,
-    label_column_name='y',
-    n_cross_validations= 2)
+     automl_config = AutoMLConfig(
+        experiment_timeout_minutes=30,
+        task='classification',
+        primary_metric='accuracy',
+        training_data=dataset,
+        label_column_name='y',
+        n_cross_validations= 2)
     
 1. experiment_timeout_minutes defines how long experiment should continue to run in minutes. Parameter is chosen to be 30.
 2. primary_metric is set to accuracy. The same metric is used as in Scikit-Learn pipeline for comparition reasons.
@@ -71,8 +71,8 @@ The following configuration for AutoML was used:
 
 Scikit_learn: Binary Logistic Regression:
               
-    Best model metrics: {'Max iterations:': 50, 'Regularization Strength:': 0.1, 'Accuracy': 0.9115320949052786}
-    which is 91.2% in accuracy.
+       Best model metrics: {'Max iterations:': 50, 'Regularization Strength:': 0.1, 'Accuracy': 0.9115320949052786}
+       which is 91.2% in accuracy.
 
 AutoML: Estimator is VotingEnsemble and soft voting is used. It used soft voting principle where  every 
         individual classifier provides a probability value that a data point belongs to a particular target class.
