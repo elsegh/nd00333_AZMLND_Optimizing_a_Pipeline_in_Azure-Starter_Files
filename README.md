@@ -94,7 +94,7 @@ Accuracy is not that good measure of skewed datasets instead F1-score or AUC-cur
 More equally distributed classes  generalize better in training.  F1-score takes into account the type of errors such as  
 false positive and false negative and not just the number of predictions that were incorrect.
 
-![Bild%202023-11-28%20kl.%2014.23.jpeg](attachment:Bild%202023-11-28%20kl.%2014.23.jpeg)
+![Bild%202023-11-28%20kl.%2014.23.jpeg](Bild%202023-11-28%20kl.%2014.23.jpeg)
 
 ## Proof of cluster clean up
 see the code.
