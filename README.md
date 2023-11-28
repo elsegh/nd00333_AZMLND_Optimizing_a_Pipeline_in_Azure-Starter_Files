@@ -9,7 +9,7 @@ Hyperparameters of the model was optimized using HyperDrive.
 Finally, results was compared with thse two methods.
 Image below shows the structure of these tw omethods.
 
-![Bild%202023-11-26%20kl.%2015.29.jpeg](attachment:Bild%202023-11-26%20kl.%2015.29.jpeg).
+![Bild%202023-11-26%20kl.%2015.29.jpeg](Bild%202023-11-26%20kl.%2015.29.jpeg).
 
 
 ## Useful Resources
