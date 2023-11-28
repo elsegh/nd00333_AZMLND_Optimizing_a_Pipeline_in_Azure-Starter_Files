@@ -30,14 +30,15 @@ The best performing model was AutoML VotingEnsemble, accuracy was 91.7 %. Howeve
 ## Scikit-learn Pipeline
 
 RandomParameterSampling was chosen. Following hyperparameters were used: regularisation, C,  and maximum iterations, max_ter.
- '--C' : choice(0.1,1,10,20,50,100,200,500),
- '--max_iter': choice(30,50,100,200,300)
+ 
+  '--C' : choice(0.1,1,10,20,50,100,200,500),
+  '--max_iter': choice(30,50,100,200,300)
 
 using RandomParaneterSampling every memeber of the population has equal chance to be selected.
 It is faster and supports early termination of low performance runs.
 Early stopping policy is made as follows:
  
-BanditPolicy(evaluation_interval=2, slack_factor=0.1, slack_amount=None, delay_evaluation=0)
+ BanditPolicy(evaluation_interval=2, slack_factor=0.1, slack_amount=None, delay_evaluation=0)
 
 Early stopping is a form of regularisation. It saves computing resources and avoids overfitting 
 and it is performed automatically. 
@@ -51,7 +52,7 @@ Scikit-Learn algorithm chosen is  binary logistic regression for classifiaction.
 
 The following configuration for AutoML was used:
 
-automl_config = AutoMLConfig(
+ automl_config = AutoMLConfig(
     experiment_timeout_minutes=30,
     task='classification',
     primary_metric='accuracy',
